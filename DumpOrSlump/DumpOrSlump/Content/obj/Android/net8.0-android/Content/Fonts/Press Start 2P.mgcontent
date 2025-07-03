@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/Matea Velichkovska/Documents/GitHub/DumpOrSlump/DumpOrSlump/DumpOrSlump/Content/Fonts/Press Start 2P.spritefont</SourceFile>
+  <SourceTime>2025-06-30T00:03:23.3271642+02:00</SourceTime>
+  <DestFile>C:/Users/Matea Velichkovska/Documents/GitHub/DumpOrSlump/DumpOrSlump/DumpOrSlump/Content/bin/Android/Content/Fonts/Press Start 2P.xnb</DestFile>
+  <DestTime>2025-07-03T12:47:14.4624105+02:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2024-08-16T19:05:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

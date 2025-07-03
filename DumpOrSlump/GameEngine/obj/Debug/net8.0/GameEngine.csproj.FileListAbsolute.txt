@@ -1,0 +1,13 @@
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\bin\Debug\net8.0\GameEngine.deps.json
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\bin\Debug\net8.0\GameEngine.dll
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\bin\Debug\net8.0\GameEngine.pdb
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\GameEngine.csproj.AssemblyReference.cache
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\GameEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\GameEngine.AssemblyInfoInputs.cache
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\GameEngine.AssemblyInfo.cs
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\GameEngine.csproj.CoreCompileInputs.cache
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\GameEngine.sourcelink.json
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\GameEngine.dll
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\refint\GameEngine.dll
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\GameEngine.pdb
+C:\Users\Matea Velichkovska\Documents\GitHub\DumpOrSlump\DumpOrSlump\GameEngine\obj\Debug\net8.0\ref\GameEngine.dll

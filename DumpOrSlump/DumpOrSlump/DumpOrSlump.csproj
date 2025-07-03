@@ -11,6 +11,10 @@
         <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105"/>
         <PackageReference Include="MonoGame.Framework.Android" Version="3.8.2.1105"/>
     </ItemGroup>
+    <ItemGroup>
+      <ClCompile Include="Content\FX\LightShader.fx" />
+      <ClCompile Include="Content\FX\PixelationEffect.fx" />
+    </ItemGroup>
     <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
         <Message Text="Restoring dotnet tools" Importance="High"/>
         <Exec Command="dotnet tool restore"/>
