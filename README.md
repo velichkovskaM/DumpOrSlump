@@ -34,7 +34,7 @@ Race against time to clean your bedroom before you unleash Mom's wrath - or slum
 [![Dump or Slump Official Trailer](https://markdown-videos-api.jorgenkh.no/youtube/6R5senvOHmc)
 ](https://www.youtube.com/watch?v=6R5senvOHmc&list=PLX0hM3dSFDjWd2ZuCHAV66EeVbNAUSmIG "Opens on YouTube")
 
-## Phone Gameplay Screenshots
+## Phone Gameplay Screenshots 🤳
 <p align="center">
   <img src="https://github.com/user-attachments/assets/bac5a339-55b4-4d65-a76f-e23163e8bb89" width="400" alt="Basket screen">
   <img src="https://github.com/user-attachments/assets/08a61623-da9b-4595-9155-edc93f6020fa" width="400" alt="Boy screen"><br>
@@ -42,7 +42,7 @@ Race against time to clean your bedroom before you unleash Mom's wrath - or slum
   <img src="https://github.com/user-attachments/assets/5e26af03-8469-49c9-a0b3-f7f5fbfbc663" width="400" alt="Mom screen">
 </p>
 
-## Tablet Gameplay Screenshots
+## Tablet Gameplay Screenshots 📱
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a4a546e6-30b3-4fff-9ceb-940e1a4de5b5" width="400" alt="Basket screen">
   <img src="https://github.com/user-attachments/assets/5c8d1c75-7495-40c8-be21-7e0966bbd192" width="400" alt="Boy screen"><br>
