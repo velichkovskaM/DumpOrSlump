@@ -27,21 +27,19 @@ public class DropOffArea : Component
     // Per‑frame: show/hide de‑equip button based on player position & state
     public override void Update(GameTime gameTime, TouchCollection touches)
     {
-        if (!Game1.Instance.canDropEquipment) return;
-        
         var _player = Parent.QuadTreeParent._Scene.FindNodeByName("Player");
         var playerScript = _player.GetComponent<Player>();
         
-        if (boundingBox.Contains(_player.Transform.Position) &&
-            (playerScript.player_state == Player.player_states.cleaning ||
-            playerScript.player_state == Player.player_states.vacuuming ||
-            playerScript.player_state == Player.player_states.sorting))
-        {
-            Parent.QuadTreeParent._Scene.UiNodes.Find(x => x.name == "DeEquipButton").active = true;
-        }
-        else
-        {
-            Parent.QuadTreeParent._Scene.UiNodes.Find(x => x.name == "DeEquipButton").active = false;
-        }
+        bool show = Game1.Instance.canDropEquipment &&
+                    boundingBox.Contains(_player.Transform.Position) &&
+                    (
+                        playerScript.player_state == Player.player_states.cleaning ||
+                        playerScript.player_state == Player.player_states.vacuuming ||
+                        playerScript.player_state == Player.player_states.sorting
+                    );
+        
+        Parent.QuadTreeParent._Scene.UiNodes
+            .Find(x => x.name == "DeEquipButton")
+            .active = show;
     }
 }
