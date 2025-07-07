@@ -1,4 +1,0 @@
-drawable\ic_launcher;drawable\ic_launcher
-mipmap\ic_launcher;mipmap\ic_launcher
-values\colors;values\colors
-values\strings;values\Strings
