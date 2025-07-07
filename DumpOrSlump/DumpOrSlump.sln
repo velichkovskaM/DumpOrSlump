@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpOrSlump", "DumpOrSlump\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine", "GameEngine\GameEngine.csproj", "{50AD64EB-D8FC-4D6B-84A3-ED06DA9F6892}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpOrSlumpGame", "DumpOrSlumpGame\DumpOrSlumpGame.csproj", "{BE781BC9-F7CB-4A50-99D4-2385313A6C8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +22,9 @@ Global
 		{50AD64EB-D8FC-4D6B-84A3-ED06DA9F6892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50AD64EB-D8FC-4D6B-84A3-ED06DA9F6892}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50AD64EB-D8FC-4D6B-84A3-ED06DA9F6892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE781BC9-F7CB-4A50-99D4-2385313A6C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE781BC9-F7CB-4A50-99D4-2385313A6C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE781BC9-F7CB-4A50-99D4-2385313A6C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE781BC9-F7CB-4A50-99D4-2385313A6C8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

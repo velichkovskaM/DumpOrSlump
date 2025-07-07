@@ -1,6 +1,4 @@
-﻿// PixelationEffect.fx
-
-texture SceneTexture;
+﻿texture SceneTexture;
 sampler2D SceneSampler = sampler_state
 {
     Texture = <SceneTexture>;
@@ -52,11 +50,6 @@ float4 PS_Pixelate(VertexOut input) : COLOR
     snappedCoord = clamp(snappedCoord, 0, 1);
 
     float4 color = tex2D(SceneSampler, snappedCoord);
-
-    //if (color.r == 0 && color.g == 0 && color.b == 0)
-    //{
-    //    return float4(0, 0, 1, 1); // Blue if the sampled color is black
-    //}
 
     return color;
 }

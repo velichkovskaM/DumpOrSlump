@@ -38,7 +38,7 @@ public class Camera : Component
     public static float scale = 0;
 
     // Initializes a new camera attached to the given parent node
-    /// Sets up the projection matrix based on the graphics device
+    // Sets up the projection matrix based on the graphics device
     public Camera(Node parent, GraphicsDevice graphicsDevice) : base(parent)
     {
         _graphicsDevice = graphicsDevice;
@@ -154,5 +154,10 @@ public class Camera : Component
         
         Vector3 direction = Vector3.Normalize(farPoint - nearPoint);
         return new Ray(nearPoint, direction);
+    }
+    
+    public BoundingFrustum GetFrustum()
+    {
+        return new BoundingFrustum(viewMatrix * projectionMatrix);
     }
 }

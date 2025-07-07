@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 namespace GameEngine.Core;
 
 /// <summary>
-/// Represents a 2D axis-aligned bounding box with methods for translation,  scaling, intersection tests,
+/// Represents a 2D axis-aligned bounding box with methods for translation, scaling, intersection tests,
 /// containment checks, splitting, and vertex extraction
 /// </summary>
 public class BoundingBox

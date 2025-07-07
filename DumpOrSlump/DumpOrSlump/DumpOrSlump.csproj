@@ -6,17 +6,38 @@
         <ApplicationId>com.companyname.DumpOrSlump</ApplicationId>
         <ApplicationVersion>1</ApplicationVersion>
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <!-- <SignAssembly>true</SignAssembly> -->
+            <SignAssembly>false</SignAssembly>
+        <!-- <AssemblyOriginatorKeyFile>mygame.jks</AssemblyOriginatorKeyFile> -->
+        <PublicSign>false</PublicSign>
+        <RootNamespace>DumpOrSlump</RootNamespace>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <AndroidPackageFormat>aab</AndroidPackageFormat>
+        <AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
+        <AndroidDebuggable>false</AndroidDebuggable>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
+        <AndroidPackageFormat>apk</AndroidPackageFormat>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105"/>
-        <PackageReference Include="MonoGame.Framework.Android" Version="3.8.2.1105"/>
+        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
+        <PackageReference Include="MonoGame.Framework.Android" Version="3.8.2.1105" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
     <ItemGroup>
-      <ClCompile Include="Content\FX\LightShader.fx" />
-      <ClCompile Include="Content\FX\PixelationEffect.fx" />
+        <ProjectReference Include="..\DumpOrSlumpGame\DumpOrSlumpGame.csproj" />
+        <ProjectReference Include="..\GameEngine\GameEngine.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <MonoGameContentReference Include="Content\Content.mgcb" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidAsset Include="Content\**\*.xnb" />
     </ItemGroup>
     <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
-        <Message Text="Restoring dotnet tools" Importance="High"/>
-        <Exec Command="dotnet tool restore"/>
+        <Message Text="Restoring dotnet tools" Importance="High" />
+        <Exec Command="dotnet tool restore" />
     </Target>
 </Project>

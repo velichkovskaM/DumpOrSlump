@@ -1,7 +1,7 @@
 using GameEngine.Logger;
 
 /// <summary>
-/// Static global logger for the whole engine.
+/// Static global logger for the whole engine
 /// Delegates logging calls to the configured ILogger
 /// </summary>
 public static class Logger

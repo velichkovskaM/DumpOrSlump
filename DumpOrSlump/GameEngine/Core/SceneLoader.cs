@@ -4,8 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace GameEngine.Core;
 
 /// <summary>
-/// Provides a base class for loading, initializing, and managing a scene,
-/// including its camera, nodes, and rendering resources
+/// Provides a base class for loading, initializing, and managing a scene, including its camera, nodes, and rendering resources
 /// </summary>
 public abstract class SceneLoader
 {

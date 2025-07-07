@@ -2,19 +2,20 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Views;
+using DumpOrSlump;
 using Microsoft.Xna.Framework;
 
-namespace DumpOrSlump
+namespace Dump_Or_Slump_Android
 {
     [Activity(
         Label = "@string/app_name",
         MainLauncher = true,
-        Icon = "@drawable/icon",
+        Icon = "@mipmap/ic_launcher",
+        RoundIcon = "@mipmap/ic_launcher",
         AlwaysRetainTaskState = true,
         LaunchMode = LaunchMode.SingleInstance,
-        ScreenOrientation = ScreenOrientation.FullUser,
-        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden |
-                               ConfigChanges.ScreenSize
+        ScreenOrientation = ScreenOrientation.Landscape,
+        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize
     )]
     public class Activity1 : AndroidGameActivity
     {

@@ -83,18 +83,21 @@ public class ModelRenderer : Component
         activeLightCount = 7;
     }
     
-    public void AddLight(Vector3 position, Vector3 color, float range)
+    public BoundingSphere GetBoundingSphere()
     {
-        if (activeLightCount < 8)
-        {
-            lights[activeLightCount] = new Light { Position = position, Color = color, Range = range };
-            activeLightCount++;
-        }
-        else
-        {
-            Console.WriteLine("Maximum number of lights reached.");
-        }
+        // Merge all mesh spheres so we only do this once
+        if (model == null) return new BoundingSphere();
+            
+        BoundingSphere sphere = model.Meshes[0].BoundingSphere;
+        for (int i = 1; i < model.Meshes.Count; i++)
+            sphere = BoundingSphere.CreateMerged(
+                sphere, model.Meshes[i].BoundingSphere);
+
+        // Push it into world-space
+        sphere = sphere.Transform(worldMatrix);
+        return sphere;
     }
+    
 
     public void AddModel(Model name)
     {

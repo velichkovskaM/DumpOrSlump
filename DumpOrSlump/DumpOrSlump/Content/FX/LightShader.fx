@@ -90,7 +90,6 @@ float4 PS(VertexOut input) : COLOR
     return float4(finalColor, baseColor.a); // Preserve alpha from base color
 }
 
-// Technique
 technique SimpleTechnique
 {
     pass P0

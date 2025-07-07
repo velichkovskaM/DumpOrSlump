@@ -51,18 +51,6 @@
 /processorParam:TextureFormat=Color
 /build:SpriteSheets/ChildPlayerSpriteSheet.png
 
-#begin Decorations.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:SpriteSheets/Decorations.png
-
 #begin DoggoSpriteSheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -158,7 +146,7 @@
 /processorParam:TextureFormat=Compressed
 /build:3DModels/Wardrobe.fbx
 
-#begin Bedroom.fbx
+#begin TestRoom.fbx
 /importer:FbxImporter
 /processor:ModelProcessor
 /processorParam:ColorKeyColor=0,0,0,0
@@ -175,7 +163,7 @@
 /processorParam:Scale=1
 /processorParam:SwapWindingOrder=False
 /processorParam:TextureFormat=Compressed
-/build:3DModels/Bedroom.fbx
+/build:3DModels/TestRoom.fbx
 
 # FONTS
 
@@ -185,3 +173,79 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fonts/Press Start 2P.spritefont
+
+# SOUND EFFECTS
+
+#begin Click.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/Click.wav
+
+#begin door_open_close.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/door_open_close.wav
+
+#begin LostOutro.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/LostOutro.wav
+
+#begin pickup_clothes.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/pickup_clothes.wav
+
+#begin pickup_paper.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/pickup_paper.wav
+
+#begin Radio.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/Radio.wav
+
+#begin Restart.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/Restart.wav
+
+#begin throw.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/throw.wav
+
+#begin vacuum.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/vacuum.wav
+
+#begin WinOutro.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundEffect/WinOutro.wav
+
+# MUSIC
+
+#begin IntroMusic.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/IntroMusic.mp3
+
+#begin main_level_background.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/main_level_background.mp3

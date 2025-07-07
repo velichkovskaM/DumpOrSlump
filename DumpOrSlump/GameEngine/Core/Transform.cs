@@ -46,15 +46,24 @@ public class Transform
         Scale = scale ?? Vector3.One;
     }
 
-    // Handles updating the node's position in the quad tree if it has moved outside its boundary
+    /// <summary>
+    /// Checks whether the transform’s current position still lies within the boundary of the QuadTree leaf that contains its parent node. If the
+    /// object has crossed cell boundaries, it is removed and reinserted at the new location. Finally, the TreeUpdateMark flag is cleared
+    /// </summary>
     public void HandleTreeUpdateMark()
     {
+        // Early‑out if we’re not managed by a QuadTree node
         if (ParentNode?.QuadTreeParent != null)
         {
+            // Only act if we have genuinely moved outside the node’s AABB and the new position is valid (NaN check guards against corrupt data)
             if (!ParentNode.QuadTreeParent._boundary.Contains(_position) && !float.IsNaN(Position.X))
             {
                 var Scene = ParentNode.QuadTreeParent._Scene;
+                
+                // Remove from the old cell
                 Scene.Remove(ParentNode);
+                
+                // Attempt to insert at the new
                 bool inserted = Scene.Insert(ParentNode);
                 if (!inserted)
                 {
@@ -62,6 +71,7 @@ public class Transform
                 }
             }
         }
+        // Mark handled
         TreeUpdateMark = false;
     }
 }

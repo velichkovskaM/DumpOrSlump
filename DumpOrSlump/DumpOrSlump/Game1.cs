@@ -1,52 +1,60 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+using Android.Graphics;
+using Android.OS;
+using Android.Util;
+using Dump_Or_Slump_Android;
+using Microsoft.Xna.Framework;
 
 namespace DumpOrSlump;
 
-public class Game1 : Game
+/// <summary>
+/// Android entry‑point that extends the shared game core with platform‑specific initialization for logging, save‑file access,
+/// and device resolution detection
+/// </summary>
+public class Game1 : DumpOrSlumpGame.Game1
 {
-    private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
-
-    public Game1()
+    // ctor ─ sets up logging and platform services
+    public Game1() : base()
     {
-        _graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
-    }
+        Logger.Initialize(new AndroidLogger());
+        GameEngine.SaveAPI.SetClass(typeof(AndroidSaveAPI));
+        Instance = this;
 
+    }
+    
+    // Initialize ─ query device bounds before base init
     protected override void Initialize()
     {
-        // TODO: Add your initialization logic here
+        var windowManager = Game.Activity.WindowManager;
+        if (Build.VERSION.SdkInt >= BuildVersionCodes.S)
+        {
+            Rect bounds = windowManager.CurrentWindowMetrics.Bounds;
+            fullDimensions = (bounds.Width(), bounds.Height());
+        } else {
+            DisplayMetrics metrics = new DisplayMetrics();
+            windowManager.DefaultDisplay.GetRealMetrics(metrics);
+            int deviceWidth = metrics.WidthPixels;
+            int deviceHeight = metrics.HeightPixels;
 
+            fullDimensions = (deviceWidth, deviceHeight);
+        }
+
+        Logger.Error($"Full dimensions in the constructor: {fullDimensions.width}x{fullDimensions.height}");
         base.Initialize();
     }
-
+    
     protected override void LoadContent()
     {
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-        // TODO: use this.Content to load your game content here
+        base.LoadContent();
     }
-
+    
     protected override void Update(GameTime gameTime)
     {
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-            Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
-
-        // TODO: Add your update logic here
-
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
-
-        // TODO: Add your drawing code here
-
         base.Draw(gameTime);
     }
+    
 }

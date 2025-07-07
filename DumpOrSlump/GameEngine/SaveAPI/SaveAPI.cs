@@ -4,7 +4,7 @@ using Dump_Or_Slump_Android.SaveAPI;
 namespace GameEngine;
 
 /// <summary>
-/// Static SaveAPI dispatcher — acts as a bridge to platform-specific static save/load implementations
+/// Static SaveAPI dispatcher - acts as a bridge to platform-specific static save/load implementations
 /// Uses reflection to dynamically invoke static methods on the implementation Type
 /// </summary>
 public static class SaveAPI
