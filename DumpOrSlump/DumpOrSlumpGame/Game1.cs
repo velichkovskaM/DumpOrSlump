@@ -130,14 +130,15 @@ public class Game1 : Game
 
         // Off-screen colour / depth buffer (where the world is drawn)  
         
+        int bbW = GraphicsDevice.PresentationParameters.BackBufferWidth;
+        int bbH = GraphicsDevice.PresentationParameters.BackBufferHeight;
+
         renderTarget = new RenderTarget2D(
             GraphicsDevice,
-            GraphicsDevice.Viewport.Width,
-            GraphicsDevice.Viewport.Height,
+            bbW, bbH, // 1-to-1 with the swap-chain
             false,
             SurfaceFormat.Color,
-            DepthFormat.Depth24
-        );
+            DepthFormat.Depth24);
 
         // Pixelation shader
         

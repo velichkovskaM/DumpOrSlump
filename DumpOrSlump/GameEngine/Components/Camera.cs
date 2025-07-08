@@ -137,21 +137,14 @@ public class Camera : Component
     // Generates a ray from a screen click position for 3D picking
     public Ray GenerateRayFromClick(Vector2 screenPosition)
     {
-        Vector2 correctedPosition;
-        float scale = (float)_graphicsDevice.PresentationParameters.BackBufferHeight / (float)prefferedHeight;
-        float scaledWidth = prefferedWidth * scale;
-        var leftBlackBar = (_graphicsDevice.PresentationParameters.BackBufferWidth - scaledWidth) * 0.5f;
+        Vector3 nearPoint = new Vector3(screenPosition, 0f);
+        Vector3 farPoint  = new Vector3(screenPosition, 1f);
 
-        correctedPosition = screenPosition - new Vector2(leftBlackBar * 0.5f, 0);
+        nearPoint = _graphicsDevice.Viewport.Unproject(
+            nearPoint, projectionMatrix, viewMatrix, Matrix.Identity);
+        farPoint  = _graphicsDevice.Viewport.Unproject(
+            farPoint,  projectionMatrix, viewMatrix, Matrix.Identity);
 
-        Vector3 mousePosNear = new Vector3(correctedPosition.X, correctedPosition.Y, 0f);
-        Vector3 mousePosFar  = new Vector3(correctedPosition.X, correctedPosition.Y, 1f);
-        
-        Vector3 nearPoint = _graphicsDevice.Viewport.Unproject(
-            mousePosNear, projectionMatrix,viewMatrix, Matrix.Identity);
-        Vector3 farPoint = _graphicsDevice.Viewport.Unproject(
-            mousePosFar, projectionMatrix,viewMatrix, Matrix.Identity);
-        
         Vector3 direction = Vector3.Normalize(farPoint - nearPoint);
         return new Ray(nearPoint, direction);
     }

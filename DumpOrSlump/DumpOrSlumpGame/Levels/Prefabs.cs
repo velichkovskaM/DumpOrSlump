@@ -453,7 +453,7 @@ public static class Prefabs
             new (new Vector2(25.7f,4.4f), new Vector2(28f, 10)), // Under Child playroom right side
             //new (new Vector2(27f,1f), new Vector2(30f, 4.4f)), // Under Child bed
             new (new Vector2(20f,1f), new Vector2(26f, 4.4f)), // All the way to the wall under child bedroom
-            new (new Vector2(4.5f,1.5f), new Vector2(18f, 5f)), // In front of door
+            new (new Vector2(4.5f,3f), new Vector2(18f, 5f)), // In front of door
             //new (new Vector2(3f,1f), new Vector2(4f, 3f)), // Under bed
         };
         

@@ -1,6 +1,6 @@
-using Android.Graphics;
 using Android.OS;
 using Android.Util;
+using Android.Views;
 using Dump_Or_Slump_Android;
 using Microsoft.Xna.Framework;
 
@@ -21,25 +21,53 @@ public class Game1 : DumpOrSlumpGame.Game1
 
     }
     
-    // Initialize ─ query device bounds before base init
     protected override void Initialize()
     {
-        var windowManager = Game.Activity.WindowManager;
-        if (Build.VERSION.SdkInt >= BuildVersionCodes.S)
-        {
-            Rect bounds = windowManager.CurrentWindowMetrics.Bounds;
-            fullDimensions = (bounds.Width(), bounds.Height());
-        } else {
-            DisplayMetrics metrics = new DisplayMetrics();
-            windowManager.DefaultDisplay.GetRealMetrics(metrics);
-            int deviceWidth = metrics.WidthPixels;
-            int deviceHeight = metrics.HeightPixels;
+        // 1. Hide system bars in sticky immersive mode
+        EnterStickyImmersiveMode(); 
 
-            fullDimensions = (deviceWidth, deviceHeight);
-        }
+        // 2. Now query drawable area and size your back-buffer…
+        fullDimensions = GetWindowBounds();
+        _graphics.PreferredBackBufferWidth  = fullDimensions.width;
+        _graphics.PreferredBackBufferHeight = fullDimensions.height;
+        _graphics.IsFullScreen = true;
+        _graphics.HardwareModeSwitch = false;
+        _graphics.ApplyChanges();
 
-        Logger.Error($"Full dimensions in the constructor: {fullDimensions.width}x{fullDimensions.height}");
         base.Initialize();
+    }
+    
+    // Edge-to-edge immersive mode  (works from API 21 → 34+)
+    void EnterStickyImmersiveMode()
+    {
+        var decor = Game.Activity.Window.DecorView;
+        var uiOptions =
+            SystemUiFlags.LayoutStable              // keep layout from resizing
+            | SystemUiFlags.LayoutFullscreen           // allow content under status bar
+            | SystemUiFlags.LayoutHideNavigation       // allow content under nav bar
+            | SystemUiFlags.Fullscreen                 // hide status bar
+            | SystemUiFlags.HideNavigation             // hide nav bar
+            | SystemUiFlags.ImmersiveSticky;           // keep them hidden after interaction
+
+        decor.SystemUiVisibility = (StatusBarVisibility)uiOptions;
+    }
+    
+    // Full window size helper (no inset subtraction)
+    private (int width, int height) GetWindowBounds()
+    {
+        var wm = Game.Activity.WindowManager;
+
+        if (Build.VERSION.SdkInt >= BuildVersionCodes.R)
+        {
+            var b = wm.CurrentWindowMetrics.Bounds;
+            return (b.Width(), b.Height());
+        }
+        else
+        {
+            var dm = new DisplayMetrics();
+            wm.DefaultDisplay.GetRealMetrics(dm);
+            return (dm.WidthPixels, dm.HeightPixels);
+        }
     }
     
     protected override void LoadContent()
