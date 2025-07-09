@@ -8,6 +8,9 @@ Race against time to clean your bedroom before you unleash Mom's wrath - or slum
 
 <br clear="left"> 
 
+**Check the game out on itch.io:** [https://sadge-games.itch.io/dump-or-slump](https://sadge-games.itch.io/dump-or-slump)
+
+*Coming soon to Google Play!*
 > Android game built with **MonoGame 3.8**, **C#** and **HLSL**
 
 ## Gameplay 🎮
