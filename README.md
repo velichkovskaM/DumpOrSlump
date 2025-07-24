@@ -4,7 +4,7 @@
      align="left"
      width="120"
      alt="Project logo">
-Race against time to clean your bedroom before you unleash Mom's wrath - or slump in defeat! Sort clothes, vacuum dust, and throw out paper while your mischievous brother and playful dog add to the mayhem. Dodge unexpected messes and keep your stamina intact — Mom’s scolding is no joke! Will you beat the ticking clock, and solve the puzzled game? This energetic, quirky game challenges your reflexes while balancing tidiness and disaster. Keep calm and clean on — before it’s too late! 
+Race against time to clean your bedroom before you unleash Mom's wrath - or slump in defeat! Sort clothes, vacuum dust, and throw out paper while your mischievous brother and playful dog add to the mayhem. Dodge unexpected messes and keep your stamina intact - Mom’s scolding is no joke! Will you beat the ticking clock, and solve the puzzled game? This energetic, quirky game challenges your reflexes while balancing tidiness and disaster. Keep calm and clean on - before it’s too late! 
 
 <br clear="left"> 
 
